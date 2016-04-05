@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>あれ</title>
+  </head>
+  <body>
+    <p><select id="f" onchange="render()">
+        <option value="uzumaki" selected>渦巻き</option>
+        <option value="lissajous">リサージュ</option>
+        <option value="sin">正弦曲線</option>
+        <option value="koiru">コイル</option>
+    </select></p>
+    <p>(x(t), y(t))</p>
+    <p><canvas id="graph1" width="200" height="200"></canvas></p>
+    <p>θ=<input id="theta" type="number" size="10" value="45" step="1" oninput="render()">°</p>
+    <p>X(t)</p>
+    <p><canvas id="graph2" width="200" height="200"></canvas></p>
+    <p>D=<input id="d" type="number" size="10" value="5" step="1" oninput="render()"></p>
+    <p>(x(t), x(t+D))</p>
+    <p><canvas id="graph3" width="200" height="200"></canvas></p>
+    <script src="./main.js"></script>
+  </body>
+</html>
+
