@@ -8,6 +8,10 @@ type Func2d = (t:number)=>Point;
 //関数
 namespace funcs{
     export const uzumaki:Func2d = (t:number)=> new Point(t/5*Math.cos(t/5), t/5*Math.sin(t/5));
+    export const uzumaki2:Func2d = (t:number)=>{
+        let r = t/6*(1+0.2*Math.cos(t));
+        return new Point(r*Math.cos(t/20), r*Math.sin(t/20));
+    };
     export const lissajous:Func2d = (t:number)=> new Point(80*Math.cos(t/8), 80*Math.sin(t/3));
     export const sin:Func2d = (t:number)=> new Point(t/2.5-100, 80*Math.sin(t/10));
     export const koiru:Func2d = (t:number)=> new Point(t/2.5-100+10*Math.cos(t/8), 80*Math.sin(t/8));

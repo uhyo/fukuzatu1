@@ -9,6 +9,10 @@ var Point = (function () {
 var funcs;
 (function (funcs) {
     funcs.uzumaki = function (t) { return new Point(t / 5 * Math.cos(t / 5), t / 5 * Math.sin(t / 5)); };
+    funcs.uzumaki2 = function (t) {
+        var r = t / 6 * (1 + 0.2 * Math.cos(t));
+        return new Point(r * Math.cos(t / 20), r * Math.sin(t / 20));
+    };
     funcs.lissajous = function (t) { return new Point(80 * Math.cos(t / 8), 80 * Math.sin(t / 3)); };
     funcs.sin = function (t) { return new Point(t / 2.5 - 100, 80 * Math.sin(t / 10)); };
     funcs.koiru = function (t) { return new Point(t / 2.5 - 100 + 10 * Math.cos(t / 8), 80 * Math.sin(t / 8)); };
